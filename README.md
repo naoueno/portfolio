@@ -1,7 +1,7 @@
 # portfolio
 
 ## portfolio url
-https://console.firebase.google.com/project/myfirstfirebase70/hosting/main
+https://myfirstfirebase70.web.app
 
 ## Project setup
 ```
