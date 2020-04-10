@@ -1,8 +1,13 @@
 <template>
   <div id="Header">
     <button> @click="toggle" class="btn btn=success"><img src="assets/css/7247-00036-2.jpeg"></button>
-    <Drawer @close="menu" align="left" :closeable="true">
-      <dive v-if="open">contact here
+    <Drawer
+      align="left"
+      :closeable="true"
+      @close="menu"
+    >
+      <dive v-if="open">
+        contact here
       </dive>
     </Drawer>
   </div>
@@ -10,13 +15,11 @@
 
  <script>
 import Drawer from "vue-simple-drawer";
-import Menu from "../components/Menu.vue"
 
 export default {
   name: 'Header',
   components:{
     Drawer,
-    Menu
   }
 }
 </script>

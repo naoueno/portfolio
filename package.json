@@ -5,7 +5,27 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lint-staged": "Lint-staged",
+    "stylelint": "stylelint \"src/**/*.vue\" --fix"
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
+  "lint-staged": {
+    "src/**/*.{js.vue}": [
+      "npm run stylelint",
+      "npm run lint --fix",
+      "git add"
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "indentation": 2,
+      "declaration-block-trailing-semicoron": "always",
+      "block-closing-brace-newline-after": "always-single-line"
+    }
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
@@ -25,6 +45,9 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
+    "lint-staged": "10.1.2",
+    "stylelint": "13.3.0",
+    "stylelint-config-standard": "20.0.0",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
@@ -35,7 +58,7 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/recommended",
       "eslint:recommended"
     ],
     "parserOptions": {
