@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lint-staged": "Lint-staged",
+    "lint-staged": "lint-staged",
     "stylelint": "stylelint \"src/**/*.vue\" --fix"
   },
   "pre-commit": [
@@ -31,7 +31,9 @@
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.10.1",
     "core-js": "^3.6.4",
-    "eslint-loader": "^2.1.2",
+    "fibers": "^4.0.2",
+    "jquery": "^3.4.1",
+    "sass": "^1.26.3",
     "vue": "^2.6.11",
     "vue-loader": "^15.9.1",
     "vue-router": "^3.1.6",
@@ -43,13 +45,12 @@
     "@vue/cli-plugin-eslint": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.1.2",
-    "lint-staged": "10.1.2",
-    "stylelint": "13.3.0",
-    "stylelint-config-standard": "20.0.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "lint-staged": "^8.0.0",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
+    "pre-commit": "^1.2.2",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

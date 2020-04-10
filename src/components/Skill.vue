@@ -1,7 +1,23 @@
 <template>
   <div id="skillSection">
-    <sapn>Skill Set</sapn>
-    <span>Skill Explain</span>
+    <div id="skillTitle">
+      <h1>Skill Set</h1>
+    </div>
+
+    <div id="skillExplain">
+      <p>sample</p>
+    </div>
+
+    <div id="gitHubLabel">
+      <p>label</p>
+    </div>
+
+    <a
+      id="gitHubLink"
+      href="https://github.com/naoueno"
+    >
+      GitHub:https://github.com/naoueno
+    </a>
   </div>
 </template>
 
@@ -12,7 +28,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 h3 {
   margin: 40px 0 0;
 }

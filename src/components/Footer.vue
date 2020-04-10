@@ -14,18 +14,13 @@ export default {
 </script>
 
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+#footerSection{
+  background: -moz-linear-gradient(top, #80E1F7, #06C1E6);
+  background: -webkit-linear-gradient(top, #80E1F7, #06C1E6);
+  background: linear-gradient(to bottom, #80E1F7, #06C1E6);
+  }
+#footerCopyright{
+  color:#ffffff;
+
 }
 </style>

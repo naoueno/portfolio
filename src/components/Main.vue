@@ -8,7 +8,7 @@
     </div>
     <img
       id="profilePicture"
-      src="7247-00036-2.jpeg"
+      src="../assets/css/profile.png"
     >
   </div>
 </template>

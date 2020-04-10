@@ -1,14 +1,24 @@
 <template>
   <div id="Header">
-    <button> @click="toggle" class="btn btn=success"><img src="assets/css/7247-00036-2.jpeg"></button>
-    <Drawer
-      align="left"
-      :closeable="true"
-      @close="menu"
+    <button
+      id="button"
+      class="btn btn-success"
+      @click="toggle"
     >
-      <dive v-if="open">
-        contact here
-      </dive>
+      <img
+        src="../assets/css/humberger.png"
+        alt="メニューアイコン"
+      >
+    </button>
+
+    <Drawer
+      :closeable="true"
+      align="left"
+      @close="toggle"
+    >
+      <div v-if="open">
+        content here
+      </div>
     </Drawer>
   </div>
 </template>
@@ -25,19 +35,19 @@ export default {
 </script>
 
 <style scoped>
-Header {
+#Header{
   background-color: #F3F3F3;
   width: 100%;
-  height: auto;
-  display: block;
+  height:auto
 }
-button {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  width: 100%;
-  height: auto;
-  border-inline: none;
+#button{
+  width: 60px;
+  height: 50px;
+  box-shadow: none;
+  border-style: none;
+  opacity: 0.3;
+  background-color: #F3F3F3;
+  background-size: cover;
 }
 ul {
   list-style-type: none;
@@ -49,5 +59,9 @@ li {
 }
 a {
   color: #42b983;
+}
+#humberger{
+  height:47%;
+  width:47%;
 }
 </style>

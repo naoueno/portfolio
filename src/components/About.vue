@@ -1,13 +1,10 @@
 <template>
   <div id="aboutSection">
-    <div>
-      id="aboutTitle">
-      About Me
+    <div id="aboutTitle">
+      <h1>About Me</h1>
     </div>
     <div id="aboutExplain">
-      <p>
-        栃木県出身、大学は神戸へ。新卒１年目の上野です。
-      </p>
+      <h2> 栃木県出身、大学は神戸へ。新卒１年目の上野です。</h2>
     </div>
   </div>
 </template>
@@ -16,7 +13,6 @@
 export default {
   name: 'About',
   msg: String
-
 }
 </script>
 
