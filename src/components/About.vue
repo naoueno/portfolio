@@ -1,6 +1,7 @@
 <template>
   <div id="aboutSection">
-    <div> id="aboutTitle">
+    <div>
+      id="aboutTitle">
       About Me
     </div>
     <div id="aboutExplain">
@@ -14,9 +15,8 @@
 <script>
 export default {
   name: 'About',
-  props: {
-    msg: String
-  }
+  msg: String
+
 }
 </script>
 

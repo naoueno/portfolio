@@ -6,16 +6,17 @@
     <div id="companyName">
       Seattleconsulting
     </div>
-    <img id="profilePicture" src="7247-00036-2.jpeg">
+    <img
+      id="profilePicture"
+      src="7247-00036-2.jpeg"
+    >
   </div>
 </template>
 
 <script>
 export default {
   name: 'Main',
-  props: {
     msg: String
-  }
 }
 </script>
 

@@ -1,9 +1,12 @@
 <template>
   <div id="drawerSection">
-    <img id="drawerButton" src="7242-00036-2.jpeg">
+    <img
+      id="drawerButton"
+      src="7242-00036-2.jpeg"
+    >
     <span>Menu</span>
     <ul id="drawerMenuSection">
-     <li>Home</li>
+      <li>Home</li>
       <li>About Me</li>
       <li>Skill Sets</li>
       <li>Vision</li>
@@ -14,9 +17,7 @@
 <script>
 export default {
   name: 'Menu',
-  props: {
     msg: String
-  }
 }
 </script>
 

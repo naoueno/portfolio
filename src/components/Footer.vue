@@ -1,15 +1,15 @@
 <template>
   <div id="footerSection">
-  <div id="footerCopyright">©︎Seattleconsulting</div>
+    <div id="footerCopyright">
+      ©︎Seattleconsulting
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Footer',
-  props: {
     msg: String
-  }
 }
 </script>
 

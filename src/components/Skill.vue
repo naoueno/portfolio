@@ -8,9 +8,7 @@
 <script>
 export default {
   name: 'Skill',
-  props: {
     msg: String
-  }
 }
 </script>
 
