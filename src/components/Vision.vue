@@ -1,19 +1,20 @@
 <template>
   <div id="vissionSection">
-    <span>Vision</span>
+    <h1>Vision</h1>
+    <div id="visionExplain">
+      <p>sample</p>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Vision',
-  props: {
     msg: String
-  }
 }
 </script>
 
-<style scoped>
+<style>
 h3 {
   margin: 40px 0 0;
 }
