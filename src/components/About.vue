@@ -4,7 +4,11 @@
       <h1>About Me</h1>
     </div>
     <div id="aboutExplain">
-      <h2> 栃木県出身、大学は神戸へ。新卒１年目の上野です。</h2>
+      <h2> 栃木県出身、大学は神戸へ。新卒１年目の上野です。
+           大学では栄養学を学んでいましたが、SeattleConsultingに出会いIT業界へ興味を持つように。
+           未経験からの出発ですが日々の研修が楽しく、SEとして経験を積みたい気持ちが強まっています。
+           SEにUIUX、人事とやりたいことは多く定まっていませんが、どれも極めていくつもりです！！！
+      </h2>
     </div>
   </div>
 </template>
@@ -30,16 +34,8 @@ export default {
 #aboutExplain {
   font-size: 12pt;
   color: #707070;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+  width: 45vh; /* ビューポートが 600px だとしたら、画像の幅は 60px になる */
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>

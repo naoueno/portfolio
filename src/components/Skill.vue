@@ -5,11 +5,7 @@
     </div>
 
     <div id="skillExplain">
-      <p>sample</p>
-    </div>
-
-    <div id="gitHubLabel">
-      <p>label</p>
+      <h2>スキルについての文、スキルについて、</h2>
     </div>
 
     <a
@@ -18,29 +14,55 @@
     >
       GitHub:https://github.com/naoueno
     </a>
+
+    <div id="skillLabel">
+      Front-end
+    </div>
+    <div>
+      <canvas id="myRaderChart">
+      </canvas>
+    </div>
+
   </div>
 </template>
 
 <script>
-export default {
+  export default {
   name: 'Skill',
     msg: String
-}
+  }
+  var ctx = document.getElementById("myRaderChart");
+  var myRaderChart = new Chart(ctx, {
+  type: 'radar',
+  data: {
+    labels: ["HTML","CSS","Javascript","SCSS","Vue"],
+    datasets: [{
+      label: 'Front-end',
+      data: [10,10,10,10,10],
+      backgroundcolor: 'RGBA(225,95,150, 0.5)',
+      bordercolor: 'RGBA(225,95,150, 1)',
+    borderWidth: 1,
+    pointBackgroundColor: 'RGB(46,106,177)'
+     }]
+  },
+  })
 </script>
 
-<style>
-h3 {
-  margin: 40px 0 0;
+<style scoped>
+#skillSection {
+  background-color: #F5F5F5;
+  text-align: center;
+  padding: 10px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+#skillTitle {
+  color: #707070;
+  font-weight: bold;
+  font-size: 18pt;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+#skillExplain {
+  font-size: 12pt;
+  color: #707070;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
