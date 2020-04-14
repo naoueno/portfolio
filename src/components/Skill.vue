@@ -58,28 +58,28 @@
       <div v-if="FEclicked">
         <FrontChart />
       </div>
-      <!-- <div v-if="BKclicked">
+      <div v-if="BKclicked">
         <BackChart />
       </div>
       <div v-if="Devclicked">
-        <DevelopChart /> -->
-
+        <DevelopChart />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
   import FrontChart from './skillchart-front.vue';
-  // import BackChart from './skillchart-back.vue';
-  // import DevelopChart from './skillchart-develop.vue';
+  import BackChart from './skillchart-back.vue';
+  import DevelopChart from './skillchart-develop.vue';
 
   export default {
     name: 'Skill',
 
     components: {
-      FrontChart
-      // BackChart,
-      // DevelopChart,
+      FrontChart,
+      BackChart,
+      DevelopChart,
     },
 
   data() {
@@ -126,7 +126,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-.cateFront-end {
+.Front-end {
   padding: 0 5px;
   display: inline-block;
   margin: 0 auto;
@@ -135,25 +135,25 @@
 .active p {
   background-color: rgba(84, 190, 238, 0.5);
 }
-.cateFront-end:active {
+.Front-end:active {
   background-color: red;
 }
-.cateBack-end {
+.Back-end {
   padding: 0 5px;
   display: inline-block;
   margin: 0 auto;
   color: blue;
 }
-.cateBack-end:active {
+.Back-end:active {
   background-color: blue;
 }
-.cateDevelop {
+.Develop {
   padding: 0 5px;
   display: inline-block;
   margin: 0 auto;
   color: purple;
 }
-.cateDevelop:active {
+.Develop:active {
   background-color: purple;
 }
 .skillGraph {
