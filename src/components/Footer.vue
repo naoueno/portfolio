@@ -1,5 +1,13 @@
 <template>
   <div id="footerSection">
+    <a
+      href="#"
+      @click="clickSmoothScroll()">
+      <img
+        class="scroll"
+        src="../assets/css/scroll-icon.png">
+    </a>
+    <div id="hoge"></div>
     <div id="footerCopyright">
       ©︎Seattleconsulting
     </div>
@@ -9,7 +17,19 @@
 <script>
 export default {
   name: 'Footer',
-    msg: String
+    msg: String ,
+  methods: {
+    clickSmoothScroll () {
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector('#hoge'),
+        400,
+        null,
+        null,
+        'y'
+      )
+    }
+   }
 }
 </script>
 
@@ -22,5 +42,13 @@ export default {
 #footerCopyright{
   color:#ffffff;
 
+}
+.scroll{
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>

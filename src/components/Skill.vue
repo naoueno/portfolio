@@ -14,38 +14,99 @@
     >
       GitHub:https://github.com/naoueno
     </a>
-
-    <div id="skillLabel">
-      Front-end
+    <a class="skillCategories">
+      <p
+        class="Frontend"
+        @click="FEchange"
+      > Front-end</p>
+      <p
+        class="Backend"
+        @click="BKchange"
+      >Back-end</p>
+      <p
+        class="Develop"
+        @click="Devchange"
+      >DevOps</p>
+    </a>
+    <div class="Frontend">
+      <p>HTML</p>
+      <p>CSS</p>
+      <p>JavaScript</p>
+      <p>SCSS</p>
+      <p>Vue</p>
     </div>
-    <div>
-      <canvas id="myRaderChart">
-      </canvas>
+    <div
+      class="Backend"
+      :class="{'active': BKclicked}"
+    >
+      <p>Java</p>
+      <p>Ruby</p>
+      <p>RubyOnRails</p>
+      <p>MySQL</p>
     </div>
+    <div
+      class="Develop"
+      :class="{'active': Devclicked}"
+    >
+      <p>Linux</p>
+      <p>Node</p>
+      <p>Git</p>
+      <p>Github</p>
+      <p>Firebase</p>
+    </div>
+    <div class="skillGraph">
+      <div v-if="FEclicked">
+        <FrontChart />
+      </div>
+      <!-- <div v-if="BKclicked">
+        <BackChart />
+      </div>
+      <div v-if="Devclicked">
+        <DevelopChart /> -->
 
+    </div>
   </div>
 </template>
 
 <script>
+  import FrontChart from './skillchart-front.vue';
+  // import BackChart from './skillchart-back.vue';
+  // import DevelopChart from './skillchart-develop.vue';
+
   export default {
-  name: 'Skill',
-    msg: String
-  }
-  var ctx = document.getElementById("myRaderChart");
-  var myRaderChart = new Chart(ctx, {
-  type: 'radar',
-  data: {
-    labels: ["HTML","CSS","Javascript","SCSS","Vue"],
-    datasets: [{
-      label: 'Front-end',
-      data: [10,10,10,10,10],
-      backgroundcolor: 'RGBA(225,95,150, 0.5)',
-      bordercolor: 'RGBA(225,95,150, 1)',
-    borderWidth: 1,
-    pointBackgroundColor: 'RGB(46,106,177)'
-     }]
+    name: 'Skill',
+
+    components: {
+      FrontChart
+      // BackChart,
+      // DevelopChart,
+    },
+
+  data() {
+    return{
+      FEclicked:true,
+      BKclicked:false,
+      Devclicked:false
+    }
   },
-  })
+  methods:{
+    FEchange(){
+      this.FEclicked=true;
+      this.BKclicked=false;
+      this.Devclicked=false;
+    },
+    BKchange(){
+      this.BKclicked=false;
+      this.FEclicked=true;
+      this.Devclicked=false;
+    },
+    Devchange(){
+      this.BKclicked=false;
+      this.FEclicked=false;
+      this.Devclicked=true;
+    }
+  }
+  }
 </script>
 
 <style scoped>
@@ -65,4 +126,65 @@
   margin-left: auto;
   margin-right: auto;
 }
+.cateFront-end {
+  padding: 0 5px;
+  display: inline-block;
+  margin: 0 auto;
+  color: red;
+}
+.active p {
+  background-color: rgba(84, 190, 238, 0.5);
+}
+.cateFront-end:active {
+  background-color: red;
+}
+.cateBack-end {
+  padding: 0 5px;
+  display: inline-block;
+  margin: 0 auto;
+  color: blue;
+}
+.cateBack-end:active {
+  background-color: blue;
+}
+.cateDevelop {
+  padding: 0 5px;
+  display: inline-block;
+  margin: 0 auto;
+  color: purple;
+}
+.cateDevelop:active {
+  background-color: purple;
+}
+.skillGraph {
+  width: 100%;
+}
+.BKsee {
+  display: none;
+}
+.DevSee {
+  display: none;
+}
+.Front-end p {
+  color: red;
+  margin: 10px;
+  float: left;
+  border: solid 1px #000;
+  padding: 0 5px;
+}
+.Back-end p {
+  color: green;
+  margin: 10px;
+  float: left;
+  border: solid 1px #000;
+  padding: 0 5px;
+}
+.DevOps p {
+  color: purple;
+  margin: 10px;
+  float: left;
+  border: solid 1px #000;
+  padding: 0 5px;
+}
+
 </style>

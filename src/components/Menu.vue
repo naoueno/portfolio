@@ -1,9 +1,5 @@
 <template>
   <div id="drawerSection">
-    <img
-      id="drawerButton"
-      src="7242-00036-2.jpeg"
-    >
     <span>Menu</span>
     <ul id="drawerMenuSection">
       <li>Home</li>
@@ -22,4 +18,8 @@ export default {
 </script>
 
 <style scoped>
+#drawerSection {
+  background-color: #f3f3f3;
+  width: 100%;
+}
 </style>
