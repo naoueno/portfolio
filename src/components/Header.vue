@@ -21,20 +21,22 @@
       <div
         id="nav-content">
         Menu
-        <li>Home</li>
-        <li>About Me</li>
-        <li>Skill Sets</li>
-        <li>Vision</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Skill Sets</a></li>
+        <li><a href="#">Vision</a></li>
       </div>
     </div>
   </div>
 </template>
 
  <script>
-export default {
-  name: 'Header',
-  msg: String
-}
+
+
+  export default {
+    name: 'Header',
+    msg: String
+  }
 </script>
 
 <style scoped>
@@ -89,7 +91,10 @@ export default {
   opacity: 0;
   transition: .3s ease-in-out;
 }
-#nav-content {
+#nav-content{
+  list-style: none;
+	margin: 0;
+	padding: 0;
   overflow: auto;
   position: fixed;
   top: 0;
@@ -113,7 +118,9 @@ export default {
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
 }
 li {
-  display: inline-block;
   margin: 0 10px;
+  display: block;
+	padding: .4em .8em;
+	text-decoration: none;
 }
 </style>

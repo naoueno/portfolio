@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-     <a href="#" @click="clickSmoothScroll()">飛ばし先</a>
-     <div id="hoge">飛び先</div>
     <Header />
     <Main />
     <About />
@@ -28,19 +26,7 @@ export default {
     Skill,
     Vision,
     Footer,
-  },
-   methods: {
-    clickSmoothScroll () {
-      event.preventDefault()
-      this.$SmoothScroll(
-        document.querySelector('#hoge'),
-        400,
-        null,
-        null,
-        'y'
-      )
-    }
-   }
+  }
 }
 </script>
 
