@@ -22,20 +22,25 @@
         id="nav-content">
         Menu
         <li><a href="#">Home</a></li>
+
         <li><a href="#">About Me</a></li>
+
         <li><a href="#">Skill Sets</a></li>
+
         <li><a href="#">Vision</a></li>
       </div>
     </div>
   </div>
 </template>
 
- <script>
+<script>
+import Menu from "./Menu.vue"
 
-
-  export default {
+export default {
     name: 'Header',
-    msg: String
+    components:{
+      Menu
+    },
   }
 </script>
 
@@ -48,7 +53,6 @@
   padding:10px;
   position: fixed;
   top: 0;
-
 }
 #nav-drawer{
   position: relative;
@@ -117,8 +121,15 @@
   transform: translateX(0%);
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
 }
-li {
-  margin: 0 10px;
+#bar {
+    display: block;
+    height: 2px;
+    background-color: #333;
+    margin: 10px 0;
+    transition: all 0.2s;
+    transform-origin: 0 0;
+}
+.li {margin: 0 10px;
   display: block;
 	padding: .4em .8em;
 	text-decoration: none;
