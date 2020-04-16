@@ -5,7 +5,8 @@
       @click="clickSmoothScroll()">
       <img
         class="scroll"
-        src="../assets/css/scroll-icon.png">
+        src="../assets/css/scroll-icon.png"
+        alt="page top">
     </a>
     <div id="hoge"></div>
     <div id="footerCopyright">
@@ -22,7 +23,7 @@ export default {
     clickSmoothScroll () {
       event.preventDefault()
       this.$SmoothScroll(
-        document.querySelector('#hoge'),
+        document.querySelector('#Header'),
         400,
         null,
         null,
