@@ -2,7 +2,6 @@
   <div id="app">
     <Header />
     <Main />
-    <Menu />
     <About />
     <Skill />
     <Vision />
@@ -13,7 +12,6 @@
 <script>
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
-import Menu from './components/Menu.vue'
 import About from './components/About.vue'
 import Skill from './components/Skill.vue'
 import Vision from './components/Vision.vue'
@@ -24,7 +22,6 @@ export default {
   components: {
     Header,
     Main,
-    Menu,
     About,
     Skill,
     Vision,
