@@ -33,12 +33,13 @@ export default {
 #aboutSection {
   background-color: #F5F5F5;
   text-align: center;
-  padding: 10px;
+  padding: 30px;
 }
 #aboutTitle {
   color: #20879F;
   font-weight: bold;
   font-size: 18pt;
+  padding-bottom: 20px;
 }
 #aboutExplain {
   font-size: 12pt;
@@ -50,6 +51,9 @@ export default {
   margin-right: auto;
   width: 34vw;
   padding-bottom: 10px;
+  border: 1px #ccc solid;
+  box-shadow: 0 2px 3px 0 #ddd;
+  padding: 15px;
 }
 #twitterLink {
   font-size: 12pt;

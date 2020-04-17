@@ -10,9 +10,9 @@ export default {
         datasets: [
           {
             label: 'Develops',
-            data: [3.5, 2, 1, 4, 2],
+            data: [3, 2, 3.5, 4, 2],
             backgroundColor: [
-              'rgba(87, 16, 131, 0.75)',
+              'rgba(87, 16, 131, 0.25)',
             ],
             borderColor: [
               'rgba(87, 16, 131, 0.75)'
