@@ -5,7 +5,15 @@
     </div>
 
     <div id="skillExplain">
-      <h2>スキルについての文、スキルについて、</h2>
+      <h2>５段階評価で設定をしました。
+          研修を通してFront-endは理解が増えましたが、
+          Javascript・SCSS・Vueは猛勉強中です。。。頑張ります！
+          Back-endは今後の研修で触れていく予定です。
+          DeveOpではGit・GitHubをスムーズに扱えるようになってきました。
+          Linux・Nodeはまだまだ理解が足りません。
+          今後も研修に励み、研修終了時にはオール５の達成が出来るよ目指します！
+
+      </h2>
     </div>
 
     <a
@@ -14,56 +22,82 @@
     >
       GitHub:https://github.com/naoueno
     </a>
-    <a class="skillCategories">
-      <p
-        class="Frontend"
-        @click="FEchange"
-      > Front-end</p>
-      <p
-        class="Backend"
-        @click="BKchange"
-      >Back-end</p>
-      <p
-        class="Develop"
-        @click="Devchange"
-      >DevOps</p>
-    </a>
-    <div class="Frontend">
-      <p>HTML</p>
-      <p>CSS</p>
-      <p>JavaScript</p>
-      <p>SCSS</p>
-      <p>Vue</p>
+    <div id="skillCategories">
+      <ul>
+        <li>
+          <span
+            id="front"
+            @click="setCurrentChart('front')"
+          >
+            Front-end
+          </span>
+        </li>
+        <li>
+          <span
+            id="back"
+            @click="setCurrentChart('back')"
+          >
+            Back-end
+          </span>
+        </li>
+        <li>
+          <span
+            id="DevOps"
+             @click="setCurrentChart('devOps')"
+          >
+            DevOps
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div id="skillList">
+      <ul
+        id="front-end"
+        :class="{'front-change': isFrontActive}"
+      >
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>SCSS</li>
+        <li>Vue</li>
+      </ul>
+      <ul
+        id="back-end"
+        :class="{'back-change': isBackActive}"
+      >
+        <li>Java</li>
+        <li>Ruby</li>
+        <li>RubyOnRails</li>
+        <li>MySQL</li>
+      </ul>
+      <ul
+        id="devops"
+        :class="{'dev-change': isDevOpsActive}"
+      >
+        <li>Linux</li>
+        <li>Node</li>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>Firebase</li>
+      </ul>
     </div>
     <div
-      class="Backend"
-      :class="{'active': BKclicked}"
+      class="chart"
+      v-if="isFrontActive"
     >
-      <p>Java</p>
-      <p>Ruby</p>
-      <p>RubyOnRails</p>
-      <p>MySQL</p>
+      <FrontChart />
     </div>
     <div
-      class="Develop"
-      :class="{'active': Devclicked}"
+      class="chart"
+      v-if="isBackActive"
     >
-      <p>Linux</p>
-      <p>Node</p>
-      <p>Git</p>
-      <p>Github</p>
-      <p>Firebase</p>
+      <BackChart />
     </div>
-    <div class="skillGraph">
-      <div v-if="FEclicked">
-        <FrontChart />
-      </div>
-      <div v-if="BKclicked">
-        <BackChart />
-      </div>
-      <div v-if="Devclicked">
-        <DevelopChart />
-      </div>
+    <div
+      class="chart"
+      v-if="isDevOpsActive"
+    >
+      <DevChart />
     </div>
   </div>
 </template>
@@ -71,7 +105,7 @@
 <script>
   import FrontChart from './skillchart-front.vue';
   import BackChart from './skillchart-back.vue';
-  import DevelopChart from './skillchart-develop.vue';
+  import DevChart from './skillchart-develop.vue';
 
   export default {
     name: 'Skill',
@@ -79,37 +113,36 @@
     components: {
       FrontChart,
       BackChart,
-      DevelopChart,
+      DevChart,
     },
 
-  data() {
-    return{
-      FEclicked:true,
-      BKclicked:false,
-      Devclicked:false
-    }
-  },
+    data() {
+      return{
+        currentChart: 'front'
+      }
+    },
+    computed: {
+      isFrontActive() {
+        return this.currentChart=='front';
+      },
+      isBackActive() {
+        return this.currentChart=='back';
+      },
+      isDevOpsActive() {
+        return this.currentChart=='devOps';
+      },
+    },
   methods:{
-    FEchange(){
-      this.FEclicked=true;
-      this.BKclicked=false;
-      this.Devclicked=false;
-    },
-    BKchange(){
-      this.BKclicked=false;
-      this.FEclicked=true;
-      this.Devclicked=false;
-    },
-    Devchange(){
-      this.BKclicked=false;
-      this.FEclicked=false;
-      this.Devclicked=true;
+    setCurrentChart(chart) {
+      this.currentChart = chart;
     }
   }
-  }
+}
 </script>
 
 <style scoped>
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
 #skillSection {
   background-color: #F5F5F5;
   text-align: center;
@@ -123,68 +156,95 @@
 #skillExplain {
   font-size: 12pt;
   color: #707070;
+  font-family: "Noto Sans Japanese", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.5;
+  word-break: break-all;
   margin-left: auto;
   margin-right: auto;
+  width: 34vw;
+  padding-bottom: 10px;
 }
-.Front-end {
-  padding: 0 5px;
+#gitHubLabel,
+#gitHubLink {
+  font-size: 12pt;
+  color: #20879f;
+  font-family: "Noto Sans Japanese", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-weight: bold;
+}
+#skillCategories {
+  padding: 20px 20px;
+}
+li {
   display: inline-block;
-  margin: 0 auto;
-  color: red;
+  margin: 10px 10px;
 }
-.active p {
-  background-color: rgba(84, 190, 238, 0.5);
+#front {
+  color: #b51a1a;
+  font-size: 18px;
+  cursor: pointer;
 }
-.Front-end:active {
-  background-color: red;
+#back {
+  color: #0f8839;
+  font-size: 18px;
+  cursor: pointer;
 }
-.Back-end {
-  padding: 0 5px;
+#DevOps {
+  color: #571083;
+  font-size: 18px;
+  cursor: pointer;
+}
+#skillList {
+  font-size: 18px;
+  width: auto;
+}
+.chart {
+  width: 70%;
+  padding-top: 35px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.li {
   display: inline-block;
-  margin: 0 auto;
-  color: blue;
+  margin: 10px 10px;
 }
-.Back-end:active {
-  background-color: blue;
+.front-change li {
+  background-color: rgba(181, 26, 26, 0.25);
 }
-.Develop {
-  padding: 0 5px;
-  display: inline-block;
-  margin: 0 auto;
-  color: purple;
+.back-change li {
+  background-color: rgba(15, 136, 57, 0.25);
 }
-.Develop:active {
-  background-color: purple;
+.dev-change li {
+  background-color: rgba(87, 16, 131, 0.25);
 }
-.skillGraph {
-  width: 100%;
+#front-end li {
+  color: rgba(181, 26, 26, 0.75);
+  height: 30px;
+  font-weight: bold;
+  padding: 12px 20px 2px 20px;
+  box-shadow: 0 0 8px gray;
 }
-.BKsee {
-  display: none;
+#back-end li {
+  color: rgba(15, 136, 57, 0.75);
+  height: 30px;
+  font-weight: bold;
+  padding: 12px 20px 2px 20px;
+  box-shadow: 0 0 8px gray;
 }
-.DevSee {
-  display: none;
+#devops li {
+  color: rgba(87, 16, 131, 0.75);
+  height: 30px;
+  font-weight: bold;
+  padding: 12px 20px 2px 20px;
+  box-shadow: 0 0 8px gray;
 }
-.Front-end p {
-  color: red;
-  margin: 10px;
-  float: left;
-  border: solid 1px #000;
-  padding: 0 5px;
+h3 {
+  margin: 40px 0 0;
 }
-.Back-end p {
-  color: green;
-  margin: 10px;
-  float: left;
-  border: solid 1px #000;
-  padding: 0 5px;
+.ul {
+  list-style-type: none;
+  padding: 0;
 }
-.DevOps p {
-  color: purple;
-  margin: 10px;
-  float: left;
-  border: solid 1px #000;
-  padding: 0 5px;
+a {
+  color: #42b983;
 }
-
 </style>

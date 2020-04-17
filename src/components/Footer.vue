@@ -1,8 +1,8 @@
 <template>
   <div id="footerSection">
     <a
-      href="#"
-      @click="clickSmoothScroll()">
+      href="#mainSection"
+    >
       <img
         class="scroll"
         src="../assets/css/scroll-icon.png"
@@ -18,12 +18,11 @@
 <script>
 export default {
   name: 'Footer',
-    msg: String ,
   methods: {
     clickSmoothScroll () {
       event.preventDefault()
       this.$SmoothScroll(
-        document.querySelector('#Header'),
+        document.querySelector('#mainSection'),
         400,
         null,
         null,
@@ -36,9 +35,9 @@ export default {
 
 <style scoped>
 #footerSection{
-  background: -moz-linear-gradient(top, #80E1F7, #06C1E6);
-  background: -webkit-linear-gradient(top, #80E1F7, #06C1E6);
-  background: linear-gradient(to bottom, #80E1F7, #06C1E6);
+  background: -moz-linear-gradient(top, #06C1E6, #99FFCC);
+  background: -webkit-linear-gradient(top,#06C1E6, #99FFCC);
+  background: linear-gradient(to bottom, #06C1E6, #99FFCC);
   }
 #footerCopyright{
   color:#ffffff;

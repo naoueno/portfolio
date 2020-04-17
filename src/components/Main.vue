@@ -23,7 +23,7 @@ export default {
 <style scoped>
 @import url(https://www.google.com/get/noto/);
 #mainSection {
-  background: linear-gradient(180deg, #80E1F7, #06C1E6);
+  background: linear-gradient(180deg, #99FFCC, #06C1E6);
   padding-bottom: 30px;
   text-align: center;
 }
@@ -34,8 +34,10 @@ export default {
   font-size: 18pt;
   text-shadow: 0px 0.5px 2px black;
   padding: 20px 0;
+  display: inline-block;
   border-bottom: 1px solid#FFFFFF;
-  margin: 0 310pt;
+  margin-left: auto;
+  margin-right: auto;
 }
 #companyName {
   padding-top: 20px;
