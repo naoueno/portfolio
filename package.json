@@ -28,14 +28,18 @@
     }
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.10.1",
     "chart.js": "^2.9.3",
     "core-js": "^3.6.4",
+    "express": "^4.17.1",
     "fibers": "^4.0.2",
     "jquery": "^3.4.1",
     "sass": "^1.26.3",
     "vue": "^2.6.11",
+    "vue-axios": "^2.1.5",
     "vue-chartjs": "^3.5.0",
     "vue-loader": "^15.9.1",
     "vue-router": "^3.1.6",
