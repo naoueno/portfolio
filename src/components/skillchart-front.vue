@@ -12,7 +12,7 @@ export default {
             label: 'Frontend',
             data: [3, 3, 1.5, 2, 0.5],
             backgroundColor: [
-              'rgba(181, 26, 26, 0.75)',
+              'rgba(181, 26, 26, 0.25)',
             ],
             borderColor: [
               'rgba(181, 26, 26, 0.75)'

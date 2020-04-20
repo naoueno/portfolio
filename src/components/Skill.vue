@@ -11,17 +11,17 @@
           Back-endは今後の研修で触れていく予定です。
           DeveOpではGit・GitHubをスムーズに扱えるようになってきました。
           Linux・Nodeはまだまだ理解が足りません。
-          今後も研修に励み、研修終了時にはオール５の達成が出来るよ目指します！
-
-      </h2>
-    </div>
-
-    <a
+          今後も研修に励み、研修終了時にはオール５の達成が出来るよう目指します！
+         </h2>
+      <a
       id="gitHubLink"
       href="https://github.com/naoueno"
     >
       GitHub:https://github.com/naoueno
     </a>
+
+    </div>
+
     <div id="skillCategories">
       <ul>
         <li>
@@ -146,12 +146,13 @@
 #skillSection {
   background-color: #F5F5F5;
   text-align: center;
-  padding: 10px;
+  padding: 30px;
 }
 #skillTitle {
-  color: #707070;
+  color: #20879F;
   font-weight: bold;
   font-size: 18pt;
+  padding: 15px;
 }
 #skillExplain {
   font-size: 12pt;
@@ -163,6 +164,10 @@
   margin-right: auto;
   width: 34vw;
   padding-bottom: 10px;
+  padding-bottom: 10px;
+  border: 1px #ccc solid;
+  box-shadow: 0 2px 3px 0 #ddd;
+  padding: 20px;
 }
 #gitHubLabel,
 #gitHubLink {
@@ -198,10 +203,10 @@ li {
   width: auto;
 }
 .chart {
-  width: 70%;
+  width: 50vw;
   padding-top: 35px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 .li {
   display: inline-block;
