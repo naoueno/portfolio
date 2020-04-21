@@ -2,18 +2,18 @@
   "skills": [
     {
       "category": "front-end",
-      "name": "HTML",
-      "score": 3
+      "name": ["HTML","CSS","Javescript","SCSS","Vue"],
+      "score": [3,3,1.5,2,0.5]
     },
     {
       "category": "back-end",
-      "name": "Java",
-      "score": 3
+      "name": ["Java","Ruby","RubyOnRails","MySQL"],
+      "score": [1,2.5,2,0]
     },
     {
-      "category": "devops",
-      "name": "github",
-      "score": 2
+      "category": "develop",
+      "name": ["Linux","Node","Git","GitHub","Firebase"],
+      "score": [3,2,3.5,4,2]
     }
   ]
 }
