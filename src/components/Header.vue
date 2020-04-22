@@ -1,12 +1,18 @@
 <template>
   <div id="nav-container">
     <div class="bg"></div>
-    <div class="button" tabindex="0">
+    <div
+      class="button"
+      tabindex="0"
+    >
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </div>
-    <div id="nav-content" tabindex="0">
+    <div
+      id="nav-content"
+      tabindex="0"
+    >
       <ul>
         <li><a href="#mainSection">Home</a></li>
         <li><a href="#aboutSection">AboutMe</a></li>
@@ -15,7 +21,6 @@
       </ul>
     </div>
   </div>
-
 </template>
 
 <style scoped>

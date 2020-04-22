@@ -8,11 +8,15 @@ const store = new Vuex.Store({ //説明の為、代入しました
   //ここに実装を書きます
   state: {
     skillCategories: [],
+    loaded: false
   },
 
   mutations: {
     setSkillCategories(state, payload) {
       state.skillCategories = payload.skillCategories;
+      /* eslint-disable no-debugger */
+      debugger
+      state.loaded = true;
     },
   },
   getters: {

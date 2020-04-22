@@ -21,12 +21,6 @@ import {mapActions,mapGetters} from 'vuex';
 
 export default {
   name: 'App',
-  data: function(){
-    return {
-      skills: [],
-      category: 'front-end',
-    };
-  },
   components: {
     Header,
     Main,
@@ -35,6 +29,13 @@ export default {
     Vision,
     Footer,
   },
+  data: function(){
+    return {
+      skills: [],
+      category: 'front-end',
+    };
+  },
+
   computed: {
     ...mapGetters({
       get: 'getSkills',

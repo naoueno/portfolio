@@ -33,7 +33,14 @@ export default {
     }
   },
   mounted () {
+    this.getSkills()
     this.renderChart(this.data, this.options)
+  },
+  methods:{
+    getSkills(){
+      const skills = this.$store.state.skills
+      this.data.labels = skills
+    }
   }
 }
 </script>
