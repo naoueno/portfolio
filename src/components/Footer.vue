@@ -6,7 +6,8 @@
       <img
         class="scroll"
         src="../assets/css/scroll-icon.png"
-        alt="page top">
+        alt="page top"
+      >
     </a>
     <div id="hoge"></div>
     <div id="footerCopyright">

@@ -2,7 +2,6 @@
   <div id="app">
     <Header />
     <Main />
-    <div>{{ this.skills }}</div>
     <About />
     <Skill />
     <Vision />
@@ -17,16 +16,9 @@ import About from './components/About.vue'
 import Skill from './components/Skill.vue'
 import Vision from './components/Vision.vue'
 import Footer from './components/Footer.vue'
-import {mapActions,mapGetters} from 'vuex';
 
 export default {
   name: 'App',
-  data: function(){
-    return {
-      skills: [],
-      category: 'front-end',
-    };
-  },
   components: {
     Header,
     Main,
@@ -35,25 +27,11 @@ export default {
     Vision,
     Footer,
   },
-  computed: {
-    ...mapGetters({
-      get: 'getSkills',
-    }),
-  },
-  mounted () {
-    this.updateSkillCategories();
-  },
-  methods: {
-    ...mapActions(['updateSkillCategories']),
 
-    getSkills() {
-      this.get(this.category);
-    },
-    async test() {
-      return await this.updateSkillCategories();
-    },
-  },
-};
+  mounted () {
+    this.$store.dispatch('updateSkillCategories')
+  }
+}
 </script>
 
 <style>

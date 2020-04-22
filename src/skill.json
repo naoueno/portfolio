@@ -1,19 +1,51 @@
 {
-  "skills": [
-    {
-      "category": "front-end",
-      "name": ["HTML","CSS","Javescript","SCSS","Vue"],
-      "score": [3,3,1.5,2,0.5]
-    },
-    {
-      "category": "back-end",
-      "name": ["Java","Ruby","RubyOnRails","MySQL"],
-      "score": [1,2.5,2,0]
-    },
-    {
-      "category": "develop",
-      "name": ["Linux","Node","Git","GitHub","Firebase"],
-      "score": [3,2,3.5,4,2]
-    }
-  ]
-}
+  "skillCategories" : [ {
+      "category" : "Front-end",
+      "skills" : [ {
+        "name" : "HTML",
+        "score" : 4
+      }, {
+        "name" : "CSS",
+        "score" : 3
+      }, {
+        "name" : "Javascript",
+        "score" : 2
+      }, {
+        "name" : "SCSS",
+        "score" : 3
+      }, {
+        "name": "Vue",
+        "score": 3
+      } ]
+    },{
+    "category" : "Back-end",
+    "skills" : [ {
+      "name": "Java",
+      "score": 3
+    }, {
+      "name": "Ruby",
+      "score": 3
+    }, {
+      "name": "RubyOnRails",
+      "score": 2
+    }, {
+      "name": "MySQL",
+      "score": 4
+    } ]
+  }, {
+    "category": "devops",
+    "skills" : [ {
+      "name": "Linux",
+      "score": 2
+    }, {
+      "name": "Git",
+      "score": 4
+    }, {
+      "name": "GitHub",
+      "score": 4
+      }, {
+        "name": "Firebase",
+        "score": 2
+      } ]
+    } ]
+  }

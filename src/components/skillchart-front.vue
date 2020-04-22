@@ -6,7 +6,7 @@ export default {
   data () {
     return {
       data: {
-        labels: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Vue'],
+        labels: [],
         datasets: [
           {
             label: 'Frontend',
@@ -33,7 +33,16 @@ export default {
     }
   },
   mounted () {
+    this.getSkills()
     this.renderChart(this.data, this.options)
+  },
+  methods:{
+    getSkills(){
+      const skillcategory = this.$store.getters.getSkills('Front-end')
+      skillcategory.skills.forEach((skill) => {
+        this.data.labels.push(skill.name)
+      })
+    }
   }
 }
 </script>
