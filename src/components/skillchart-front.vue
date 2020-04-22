@@ -6,7 +6,7 @@ export default {
   data () {
     return {
       data: {
-        labels: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Vue'],
+        labels: [],
         datasets: [
           {
             label: 'Frontend',
@@ -38,8 +38,10 @@ export default {
   },
   methods:{
     getSkills(){
-      const skills = this.$store.state.skillCategories
-      this.data.labels = skills
+      const skillcategory = this.$store.getters.getSkills('Front-end')
+      skillcategory.skills.forEach((skill) => {
+        this.data.labels.push(skill.name)
+      })
     }
   }
 }

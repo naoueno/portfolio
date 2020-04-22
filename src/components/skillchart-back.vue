@@ -6,10 +6,10 @@ export default {
   data () {
     return {
       data: {
-        labels: ['Java', 'Ruby', 'RubyOnRails', 'MySQL'],
+        labels: [],
         datasets: [
           {
-            label: 'Backend',
+            label: 'Back-end',
             data: [1, 2.5, 2.0, 0],
             backgroundColor: [
               'rgba(15, 136, 57, 0.25)',
@@ -38,8 +38,10 @@ export default {
   },
   methods:{
     getSkills(){
-      const skills = this.$store.state.skills
-      this.data.labels = skills
+      const skillcategory = this.$store.getters.getSkills('Back-end')
+      skillcategory.skills.forEach((skill) => {
+        this.data.labels.push(skill.name)
+      })
     }
   }
 }

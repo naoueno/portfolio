@@ -6,10 +6,10 @@ export default {
   data () {
     return {
       data: {
-        labels: ['Linux', 'Node', 'Git', 'Github', 'Firebase'],
+        labels: [],
         datasets: [
           {
-            label: 'Develops',
+            label: 'devops',
             data: [3, 2, 3.5, 4, 2],
             backgroundColor: [
               'rgba(87, 16, 131, 0.25)',
@@ -38,8 +38,10 @@ export default {
   },
   methods:{
     getSkills(){
-      const skills = this.$store.state.skillCategories
-      this.data.labels = skills
+      const skillcategory = this.$store.getters.getSkills('devops')
+      skillcategory.skills.forEach((skill) => {
+        this.data.labels.push(skill.name)
+      })
     }
   }
 }
