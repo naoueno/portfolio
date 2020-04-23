@@ -33,11 +33,11 @@ export default {
     }
   },
 mounted () {
-    this.getSkills ()
+    this.getSkills()
     this.renderChart(this.data, this.options)
   },
   methods: {
-    getSkills () {
+    getSkills() {
       const skillCategory = this.$store.getters.getSkills('devops')
       skillCategory.skills.forEach((skill) => {
         this.data.labels.push(skill.name)
