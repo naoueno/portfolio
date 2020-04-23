@@ -26,6 +26,10 @@ export default {
     Skill,
     Vision,
     Footer,
+  },
+
+  mounted () {
+    this.$store.dispatch('updateSkillCategories')
   }
 }
 </script>
@@ -36,7 +40,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

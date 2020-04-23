@@ -5,23 +5,23 @@
     </div>
 
     <div id="skillExplain">
-      <h2>５段階評価で設定をしました。
-          研修を通してFront-endは理解が増えましたが、
-          Javascript・SCSS・Vueは猛勉強中です。。。頑張ります！
-          Back-endは今後の研修で触れていく予定です。
-          DeveOpではGit・GitHubをスムーズに扱えるようになってきました。
-          Linux・Nodeはまだまだ理解が足りません。
-          今後も研修に励み、研修終了時にはオール５の達成が出来るよ目指します！
-
+      <h2>
+        ５段階評価で設定をしました。
+        研修を通してFront-endは理解が増えましたが、
+        Javascript・SCSS・Vueは猛勉強中です。。。頑張ります！
+        Back-endは今後の研修で触れていく予定です。
+        DeveOpではGit・GitHubをスムーズに扱えるようになってきました。
+        Linux・Nodeはまだまだ理解が足りません。
+        今後も研修に励み、研修終了時にはオール５の達成が出来るよう目指します！
       </h2>
+      <a
+        id="gitHubLink"
+        href="https://github.com/naoueno"
+      >
+        GitHub:https://github.com/naoueno
+      </a>
     </div>
 
-    <a
-      id="gitHubLink"
-      href="https://github.com/naoueno"
-    >
-      GitHub:https://github.com/naoueno
-    </a>
     <div id="skillCategories">
       <ul>
         <li>
@@ -43,7 +43,7 @@
         <li>
           <span
             id="DevOps"
-             @click="setCurrentChart('devOps')"
+            @click="setCurrentChart('devOps')"
           >
             DevOps
           </span>
@@ -82,20 +82,20 @@
       </ul>
     </div>
     <div
+      v-if="isFrontActive && loaded"
       class="chart"
-      v-if="isFrontActive"
     >
       <FrontChart />
     </div>
     <div
+      v-if="isBackActive && loaded"
       class="chart"
-      v-if="isBackActive"
     >
       <BackChart />
     </div>
     <div
+      v-if="isDevOpsActive && loaded"
       class="chart"
-      v-if="isDevOpsActive"
     >
       <DevChart />
     </div>
@@ -131,6 +131,9 @@
       isDevOpsActive() {
         return this.currentChart=='devOps';
       },
+      loaded(){
+        return this.$store.state.loaded
+      }
     },
   methods:{
     setCurrentChart(chart) {
@@ -146,12 +149,13 @@
 #skillSection {
   background-color: #F5F5F5;
   text-align: center;
-  padding: 10px;
+  padding: 30px;
 }
 #skillTitle {
-  color: #707070;
+  color: #20879F;
   font-weight: bold;
   font-size: 18pt;
+  padding: 15px;
 }
 #skillExplain {
   font-size: 12pt;
@@ -163,6 +167,10 @@
   margin-right: auto;
   width: 34vw;
   padding-bottom: 10px;
+  padding-bottom: 10px;
+  border: 1px #ccc solid;
+  box-shadow: 0 2px 3px 0 #ddd;
+  padding: 20px;
 }
 #gitHubLabel,
 #gitHubLink {
@@ -198,10 +206,10 @@ li {
   width: auto;
 }
 .chart {
-  width: 70%;
+  width: 50vw;
   padding-top: 35px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 .li {
   display: inline-block;

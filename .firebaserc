@@ -1,5 +1,21 @@
 {
   "projects": {
     "default": "myfirstfirebase70"
+  },
+  "targets": {
+    "myfirstfirebase70": {
+      "hosting": {
+        "portfolio": [
+          "myfirstfirebase70"
+        ]
+      }
+    },
+    "devo-portfolio": {
+      "hosting": {
+        "portfolio": [
+          "devo-portfolio"
+        ]
+      }
+    }
   }
 }

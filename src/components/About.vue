@@ -4,17 +4,18 @@
       <h1>About Me</h1>
     </div>
     <div id="aboutExplain">
-      <h2> 栃木県出身、大学は憧れた関西へ。Team20の上野です。
-           料理好きで、また将来の家族のためを想い大学で栄養学を勉強していました。
-           しかしSeattleConsultingに出会いIT業界に興味を抱き始め、方向転換。
-           未経験からの出発で、苦戦する日々ですがとても充実しており、勉強が楽しくて仕方ありません。
-           シアトルでのあだ名はなーちゃん。Twitterも始めました。そっと見守っていただけたらと思います。
+      <h2>
+        栃木県出身、大学は憧れた関西へ。Team20の上野です。
+        料理好きで、また将来の家族のためを想い大学で栄養学を勉強していました。
+        しかしSeattleConsultingに出会いIT業界に興味を抱き始め、方向転換。
+        未経験からの出発で、苦戦する日々ですがとても充実しており、勉強が楽しくて仕方ありません。
+        シアトルでのあだ名はなーちゃん。Twitterも始めました。そっと見守っていただけたらと思います。
       </h2>
       <a
-      id="twitterLink"
-      href="https://twitter.com/umisukinaacha"
-     >
-     Twitter:@umisukinaacha
+        id="twitterLink"
+        href="https://twitter.com/umisukinaacha"
+      >
+        Twitter:@umisukinaacha
       </a>
     </div>
   </div>
@@ -33,12 +34,13 @@ export default {
 #aboutSection {
   background-color: #F5F5F5;
   text-align: center;
-  padding: 10px;
+  padding: 30px;
 }
 #aboutTitle {
   color: #20879F;
   font-weight: bold;
   font-size: 18pt;
+  padding-bottom: 20px;
 }
 #aboutExplain {
   font-size: 12pt;
@@ -50,6 +52,9 @@ export default {
   margin-right: auto;
   width: 34vw;
   padding-bottom: 10px;
+  border: 1px #ccc solid;
+  box-shadow: 0 2px 3px 0 #ddd;
+  padding: 15px;
 }
 #twitterLink {
   font-size: 12pt;

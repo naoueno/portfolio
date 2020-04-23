@@ -4,13 +4,14 @@
       <h1>Vision</h1>
     </div>
     <div id="visionExplain">
-      <h2>SE・UIUX・人事と幅広く挑戦していきたいです。
-          どの分野でも限界を作らずに、私にしかできないことを見つけたいと考えています。
-          「上野さんに聞いてみよう」「上野さんに任せよう」
-          そう言ってもらえるような人柄と技術を身に着けることを目指しています。
-          これまで、誰と働くかを重要視してきたからこそシアトルコンサルティングに出会えました。
-          ここシアトルコンサルティングで多くの人と関わり、大きな成果を共に残していきたいです。
-          </h2>
+      <h2>
+        SE・UIUX・人事と幅広く挑戦していきたいです。
+        どの分野でも限界を作らずに、私にしかできないことを見つけたいと考えています。
+        「上野さんに聞いてみよう」「上野さんに任せよう」
+        そう言ってもらえるような人柄と技術を身に着けることを目指しています。
+        これまで、誰と働くかを重要視してきたからこそシアトルコンサルティングに出会えました。
+        ここシアトルコンサルティングで多くの人と関わり、大きな成果を共に残していきたいです。
+      </h2>
     </div>
   </div>
 </template>
@@ -34,6 +35,7 @@ export default {
   color: #20879F;
   font-weight: bold;
   font-size: 18pt;
+  padding: 15px;
 }
 #visionExplain {
 font-size: 12pt;
@@ -44,7 +46,10 @@ font-size: 12pt;
   margin-left: auto;
   margin-right: auto;
   width: 34vw;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
+  border: 1px #ccc solid;
+  box-shadow: 0 2px 3px 0 #ddd;
+  padding: 20px;
 }
 h3 {
   margin: 40px 0 0;
