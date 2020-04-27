@@ -47,9 +47,6 @@ font-size: 12pt;
   margin-right: auto;
   width: 34vw;
   padding-bottom: 30px;
-  border: 1px #ccc solid;
-  box-shadow: 0 2px 3px 0 #ddd;
-  padding: 20px;
 }
 h3 {
   margin: 40px 0 0;

@@ -10,7 +10,7 @@ export default {
         datasets: [
           {
             label: 'devops',
-            data: [3, 2, 3.5, 4, 2],
+            data: [2, 2, 3, 3],
             backgroundColor: [
               'rgba(87, 16, 131, 0.25)',
             ],

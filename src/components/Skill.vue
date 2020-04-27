@@ -155,7 +155,7 @@
   color: #20879F;
   font-weight: bold;
   font-size: 18pt;
-  padding: 15px;
+  padding: 5px;
 }
 #skillExplain {
   font-size: 12pt;
@@ -168,9 +168,6 @@
   width: 34vw;
   padding-bottom: 10px;
   padding-bottom: 10px;
-  border: 1px #ccc solid;
-  box-shadow: 0 2px 3px 0 #ddd;
-  padding: 20px;
 }
 #gitHubLabel,
 #gitHubLink {
