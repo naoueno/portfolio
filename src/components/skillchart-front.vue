@@ -10,7 +10,7 @@ export default {
         datasets: [
           {
             label: 'Frontend',
-            data: [3, 3, 1.5, 2, 0.5],
+            data: [3, 3, 1, 2, 2],
             backgroundColor: [
               'rgba(181, 26, 26, 0.25)',
             ],
@@ -33,11 +33,11 @@ export default {
     }
   },
   mounted () {
-    this.getSkills ()
+    this.getSkills()
     this.renderChart(this.data, this.options)
   },
   methods: {
-    getSkills () {
+    getSkills() {
       const skillCategory = this.$store.getters.getSkills('Front-end')
       skillCategory.skills.forEach((skill) => {
         this.data.labels.push(skill.name)

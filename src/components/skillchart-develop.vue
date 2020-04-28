@@ -10,7 +10,7 @@ export default {
         datasets: [
           {
             label: 'devops',
-            data: [3, 2, 3.5, 4, 2],
+            data: [2, 2, 3, 3],
             backgroundColor: [
               'rgba(87, 16, 131, 0.25)',
             ],
@@ -33,11 +33,11 @@ export default {
     }
   },
 mounted () {
-    this.getSkills ()
+    this.getSkills()
     this.renderChart(this.data, this.options)
   },
   methods: {
-    getSkills () {
+    getSkills() {
       const skillCategory = this.$store.getters.getSkills('devops')
       skillCategory.skills.forEach((skill) => {
         this.data.labels.push(skill.name)
