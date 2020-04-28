@@ -51,10 +51,6 @@ export default {
   margin-left: auto;
   margin-right: auto;
   width: 34vw;
-  padding-bottom: 10px;
-  border: 1px #ccc solid;
-  box-shadow: 0 2px 3px 0 #ddd;
-  padding: 15px;
 }
 #twitterLink {
   font-size: 12pt;
